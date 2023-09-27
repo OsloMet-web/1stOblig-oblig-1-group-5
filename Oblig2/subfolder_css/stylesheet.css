@@ -1,0 +1,56 @@
+main {
+	background-color: rgba(186, 184, 181, 0.275);
+}
+.innhold {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  background-color:rgba(186, 184, 181, 0.275) ;
+  padding: 3%;
+}
+
+.innhold > div {
+  background-color: rgba(209, 207, 203, 0.89);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.tittel {
+  grid-column: 1 / span 2;
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+.undertittel {
+  grid-column: 1 / span 2;
+  font-size: x-large;
+  font-weight: bold;
+}
+#shuser {
+  grid-column: 1 / span 2;
+  color: rgb(184,117,61);
+  background-color: rgb(209, 196, 183); 
+  font-weight: bold;
+}
+.bilde {
+  grid-column: 1 / span 2;
+}
+.fotograf {
+  grid-column: 1 / span 2;
+  font-size: x-small;
+  color: rgb(101, 96, 89);
+}
+.ingress {
+  grid-column: 1 / span 2;
+  font-style: italic;
+}
+.underoverskrift {
+	font-family: Georgia, 'Times New Roman', Tiimes, serif;
+}
+img {
+    width: 90%;
+}
+.atest:hover {
+    width: 120%;
+    grid-column: 1 / span 4;
+}
