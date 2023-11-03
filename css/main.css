@@ -1,0 +1,146 @@
+/* Selektor odnoszący się do każdego elementu HTML */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/* Selektor odnoszący się do elementu "<body>" w dokumencie HTML */
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Selektor odnoszący się do elementu HTML oznaczonego jako "<nav>" */
+nav{
+    background:yellow;
+    height:80px;
+    width:100%;
+}
+
+/* Sekwencja selektorów, która odnosi się do elementów "<label>" z klasą "pLogo" */
+label.pLogo{
+    color:black;
+    font-size:35px;
+    line-height:80px;
+    padding: 30px;
+    font-weight: bold;
+}
+
+/* Sekwencja selektorów odnosząca się do listy nieuporządkowanej znajdującej się wewnątrz elementu nawigacji "<nav>" */
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+
+/* Sekwencja selektorów odnosząca się do elementów HTML, które są zagnieżdżone w nawigacji "<nav>", po czym w liście nieuporządkowanej "<ul>" i na końcu w elemencie listy "<li>" */
+nav ul li{
+    display:inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    border-radius:3px;
+}
+
+/* Sekwencja selektorów odnosząca się do linków "<a>", które znajdują się wewnątrz elementów listy "<li>", znajdujących się wewnątrz elementów listy nieuporządkowanej "<ul>" */
+nav ul li a{
+    color:black;
+    font-size:18px;
+    padding: 7px 13px;
+}
+
+/* Selektor, który odnosi się do linków "<a>", gdy kursor myszy znajduje się nad nim (hover) */
+a:hover{
+    background:#ffffd6;
+    transition: 0.5s;
+}
+
+/* Selektor klasy, odnoszący się do elementów w HTML, które posiadają określoną klasę (w tym przypadku "checkbtn") */
+.checkbtn{
+    font-size:30px;
+    color:black;
+    float:right; 
+    line-height:80px;
+    cursor:pointer;
+    display:none;
+    padding-right: 20px;
+}
+
+/* Selektor ID, który odnosi się do elementu HTML o identyfikatorze "check" # - oznacza identyfikator (użycie w pliku .html: id="check") */
+#check{
+    display:none;
+}
+
+
+/* Reguła @media odnosząca się do elementów nawigacyjnych wtedy, kiedy szerokość przeglądarki ma maksymalnie 952 piksele.*/
+@media (max-width: 952px){
+    /* wytłumaczona sekwencja selektorów powyżej */
+    nav ul li a{
+        font-size:16px;
+    }
+}
+
+/* Reguła @media odnosząca się do elementów nawigacyjnych wtedy, kiedy szerokość przeglądarki ma maksymalnie 858 piksele.*/
+@media (max-width: 858px){
+
+    /* wytłumaczona sekwencja selektorów powyżej */
+    .checkbtn{
+        display:block;
+        padding-left: 10px;
+    }
+
+    /* Selektor odnoszący się do listy nieuporządkowanej w dokumencie HTML */
+    ul{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        top:80px;
+        left:-100%;
+        background-color:orange;
+        text-align:center;
+        transition: all 0.5s;
+    }
+
+    /* wytłumaczona sekwencja selektorów powyżej */
+    nav ul li{
+        display:block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    /* wytłumaczona sekwencja selektorów powyżej */
+    nav ul li a{
+        font-size:20px;
+    }
+
+    /* wytłumaczona sekwencja selektorów powyżej */
+    a:hover{
+        background:none;
+        color:yellow;
+
+    }
+
+    /* Selektor odnoszący się do elementu "ul", pod warunkiem, że element "check" jest zaznaczony (:checked) */
+    #check:checked ~ ul{
+        left:0;
+    }
+
+/* Selektor odnoszący się do elementów "<section>" w dokumencie HTML */
+}
+section{
+    background:url("sett inn bilde.jpg") no-repeat;
+    background-size:cover;
+    height:calc(100vh - 80px);
+}
+
+/* Selektor odnoszący się do elementów "<footer>" w dokumencie HTML */
+footer{
+    background-color: #fff8ad; /* Kolor tła */
+    color: #000000;  /* Kolor tekstu */
+    padding: 20px;   /* Wewnętrzny odstęp */
+    text-align:center; /* Wyrównanie tekstu do środka */
+    position: fixed; /* Ustala stopkę na stałe na dole ekranu */
+    bottom: 0;  /* Umieszcza stopkę na samym dole ekranu */
+    width: 100%; /* Szerokość stopki na całą szerokość ekranu */
+}
