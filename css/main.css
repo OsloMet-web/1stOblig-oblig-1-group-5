@@ -1,4 +1,4 @@
-/* Selektor odnoszący się do każdego elementu HTML */
+/* Selector referring to each HTML element */
 *{
     padding: 0;
     margin: 0;
@@ -8,19 +8,19 @@
 }
 
 
-/* Selektor odnoszący się do elementu "<body>" w dokumencie HTML */
+/* Selector referring to the "<body>" element in the HTML document */
 body{
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Selektor odnoszący się do elementu HTML oznaczonego jako "<nav>" */
+/* Selector referring to the HTML element labeled "<nav>" */
 nav{
     background:yellow;
     height:80px;
     width:100%;
 }
 
-/* Sekwencja selektorów, która odnosi się do elementów "<label>" z klasą "pLogo" */
+/* Selector sequence that refers to "<label>" elements with class "pLogo". */
 label.pLogo{
     color:black;
     font-size:35px;
@@ -29,13 +29,19 @@ label.pLogo{
     font-weight: bold;
 }
 
-/* Sekwencja selektorów odnosząca się do listy nieuporządkowanej znajdującej się wewnątrz elementu nawigacji "<nav>" */
+/* Selector sequence referring to an unordered list located inside the navigation element "<nav>" */
 nav ul{
     float:right;
     margin-right: 20px;
 }
 
-/* Sekwencja selektorów odnosząca się do elementów HTML, które są zagnieżdżone w nawigacji "<nav>", po czym w liście nieuporządkowanej "<ul>" i na końcu w elemencie listy "<li>" */
+/* Class selector - changing style of the nav bar you are on */
+.selected {
+    text-emphasis: triangle;
+    text-emphasis-position: under right;
+}
+
+/* Sequence of selectors referring to HTML elements that are nested in a navigation "<nav>", followed by an unordered list "<ul>" and finally a list element "<li>". */
 nav ul li{
     display:inline-block;
     line-height: 80px;
@@ -43,23 +49,22 @@ nav ul li{
     border-radius:3px;
 }
 
-/* Sekwencja selektorów odnosząca się do linków "<a>", które znajdują się wewnątrz elementów listy "<li>", znajdujących się wewnątrz elementów listy nieuporządkowanej "<ul>" */
+/* Sequence of selectors referring to "<a>" links that are inside "<li>" list elements, located inside unordered list elements "<ul>", nested in a navigation */
 nav ul li a{
     color:black;
-    font-size:18px;
+    font-size:26px;
     padding: 7px 13px;
 }
 
-/* Selektor, który odnosi się do linków "<a>", gdy kursor myszy znajduje się nad nim (hover) */
+/* Selector that refers to "<a>" links when the mouse cursor is over it (hover) */
 a:hover{
     background:#ffffd6;
     transition: 0.5s;
 }
 
-/* Selektor klasy, odnoszący się do elementów w HTML, które posiadają określoną klasę (w tym przypadku "checkbtn") */
+/* Class selector, referring to elements in HTML that have a specific class (in this case "checkbtn") */
 .checkbtn{
     font-size:30px;
-    color:black;
     float:right; 
     line-height:80px;
     cursor:pointer;
@@ -67,30 +72,38 @@ a:hover{
     padding-right: 20px;
 }
 
-/* Selektor ID, który odnosi się do elementu HTML o identyfikatorze "check" # - oznacza identyfikator (użycie w pliku .html: id="check") */
+/* ID selector, which refers to an HTML element with the identifier "check" # - denotes the ID (using in the .html file: id="check") */
 #check{
     display:none;
 }
 
 
-/* Reguła @media odnosząca się do elementów nawigacyjnych wtedy, kiedy szerokość przeglądarki ma maksymalnie 952 piksele.*/
+/* Rule that applies to navigation elements when the width of the browser is at most 952 pixels.*/
 @media (max-width: 952px){
-    /* wytłumaczona sekwencja selektorów powyżej */
+    /* exlained above */
     nav ul li a{
         font-size:16px;
     }
 }
 
-/* Reguła @media odnosząca się do elementów nawigacyjnych wtedy, kiedy szerokość przeglądarki ma maksymalnie 858 piksele.*/
+/* Rule that applies to navigation elements when the width of the browser is at most 858 pixels.*/
 @media (max-width: 858px){
 
-    /* wytłumaczona sekwencja selektorów powyżej */
+    .menu-icon {
+        display: inline;
+        background-image: url(../img/menu.svg);
+        background-size: cover;
+        padding: 6px;
+        padding-right: 40px;
+    }
+
+/* exlained above */
     .checkbtn{
         display:block;
         padding-left: 10px;
     }
 
-    /* Selektor odnoszący się do listy nieuporządkowanej w dokumencie HTML */
+/* Selector referring to an unordered list in an HTML document */
     ul{
         position:fixed;
         width:100%;
@@ -102,45 +115,48 @@ a:hover{
         transition: all 0.5s;
     }
 
-    /* wytłumaczona sekwencja selektorów powyżej */
+
+
+
+    /* exlained above */
     nav ul li{
         display:block;
         margin: 50px 0;
         line-height: 30px;
     }
 
-    /* wytłumaczona sekwencja selektorów powyżej */
+    /* exlained above */
     nav ul li a{
         font-size:20px;
     }
 
-    /* wytłumaczona sekwencja selektorów powyżej */
+    /* exlained above */
     a:hover{
         background:none;
         color:yellow;
 
     }
 
-    /* Selektor odnoszący się do elementu "ul", pod warunkiem, że element "check" jest zaznaczony (:checked) */
+/* Selector referring to the "ul" element, provided that the "check" element is checked (:checked) */
     #check:checked ~ ul{
         left:0;
     }
 
-/* Selektor odnoszący się do elementów "<section>" w dokumencie HTML */
 }
+/* Selector referring to "<section>" elements in an HTML document */
 section{
     background:url("sett inn bilde.jpg") no-repeat;
     background-size:cover;
     height:calc(100vh - 80px);
 }
 
-/* Selektor odnoszący się do elementów "<footer>" w dokumencie HTML */
+/* Selector referring to "<footer>" elements in an HTML document */
 footer{
-    background-color: #fff8ad; /* Kolor tła */
-    color: #000000;  /* Kolor tekstu */
-    padding: 20px;   /* Wewnętrzny odstęp */
-    text-align:center; /* Wyrównanie tekstu do środka */
-    position: fixed; /* Ustala stopkę na stałe na dole ekranu */
-    bottom: 0;  /* Umieszcza stopkę na samym dole ekranu */
-    width: 100%; /* Szerokość stopki na całą szerokość ekranu */
+    background-color: #fff8ad; /* Background color */
+    color: #000000;  /* Text color */
+    padding: 20px;   /* Internal spacing */
+    text-align:center; /* Center text alignment */
+    position: fixed; /* Sets the footer permanently at the bottom of the screen */
+    bottom: 0;  /* Places the footer at the very bottom of the screen */
+    width: 100%; /* Footer width for the full width of the screen */
 }
