@@ -145,7 +145,7 @@ a:hover{
 }
 /* Selector referring to "<section>" elements in an HTML document */
 section{
-    background:url("sett inn bilde.jpg") no-repeat;
+    background:url("../img/p35.jpg") no-repeat;
     background-size:cover;
     height:calc(100vh - 80px);
 }
