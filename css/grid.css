@@ -13,20 +13,21 @@
     height: 600px;
 }
 
+div{
+    word-wrap: break-word;
+}
+
 .mainbox{
-    grid-column: 2 / 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row: 2;
     background-color: blanchedalmond;
     height: 200px;
-    box-sizing: border-box;
-
 }
 
 .rightside{
-    grid-column: 4 / 5;
+    grid-column-start: 4;
+    grid-column-end: 5;
     grid-row: 2;
     background-color: aqua;
-    box-sizing: border-box;
-    
-
 }

@@ -17,6 +17,7 @@ nav{
     width:100%;
 }
 
+
 /* Selector sequence that refers to "<label>" elements with class "pLogo". */
 label.pLogo{
     color:black;
