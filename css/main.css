@@ -1,9 +1,6 @@
 /* Selector referring to each HTML element */
 *{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -77,6 +74,25 @@ a:hover{
     display:none;
 }
 
+/* Selector referring to "<section>" elements in an HTML document */
+section{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Selector referring to "<footer>" elements in an HTML document */
+footer{
+    background-color: #fff8ad; /* Background color */
+    color: #000000;  /* Text color */
+    padding: 20px;   /* Internal spacing */
+    text-align:center; /* Center text alignment */
+    position: fixed; /* Sets the footer permanently at the bottom of the screen */
+    bottom: 0;  /* Places the footer at the very bottom of the screen */
+    width: 100%; /* Footer width for the full width of the screen */
+}
+
+
+
 
 /* Rule that applies to navigation elements when the width of the browser is at most 952 pixels.*/
 @media (max-width: 952px){
@@ -142,21 +158,4 @@ a:hover{
         left:0;
     }
 
-}
-/* Selector referring to "<section>" elements in an HTML document */
-section{
-    background:url("../img/p35.jpg") no-repeat;
-    background-size:cover;
-    height:calc(100vh - 80px);
-}
-
-/* Selector referring to "<footer>" elements in an HTML document */
-footer{
-    background-color: #fff8ad; /* Background color */
-    color: #000000;  /* Text color */
-    padding: 20px;   /* Internal spacing */
-    text-align:center; /* Center text alignment */
-    position: fixed; /* Sets the footer permanently at the bottom of the screen */
-    bottom: 0;  /* Places the footer at the very bottom of the screen */
-    width: 100%; /* Footer width for the full width of the screen */
 }
